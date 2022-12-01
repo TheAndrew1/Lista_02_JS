@@ -1,22 +1,26 @@
-let campo_hora = document.getElementById("hrs_trab");
-let campo_sal = document.getElementById("salario_hora");
+let campo_saldo = document.getElementById("saldo");
+let campo_deb = document.getElementById("debito");
+let campo_crd = document.getElementById("credito");
+let situacao = document.getElementById("situacao");
+
 let valor = document.getElementById("valor");
 let botao = document.getElementById("conf"); 
 
 botao.addEventListener("click", escrever_valor);
 
-const horas_jornada = 40;
-
 function escrever_valor(){
-    let extra = 0;
-    let valor_extra = Number(campo_sal.value)*1.5;
-    let salario;
+    let saldo_atual = Number(campo_saldo.value) - Number(campo_deb.value) + Number(campo_crd.value);
+    let estado;
 
-    if(Number(campo_hora.value) > horas_jornada)
+    if(saldo_atual >= 0)
     {
-        extra = campo_hora.value - horas_jornada;
+        estado = "positivo";
+    }
+    else
+    {
+        estado = "negativo";
     }
 
-    salario = (Number(campo_hora.value)*Number(campo_sal.value)) + (valor_extra*extra);
-    valor.innerText = `R$ ${salario}`;
+    valor.innerText = `R$ ${saldo_atual}`;
+    situacao.innerText = `Saldo ${estado}`;
 }
