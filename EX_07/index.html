@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX_07</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <form action="">
+        <div>
+            <h2>Pesquisa entre habitantes</h2>
+            
+            <input type="text" name="Nome" id="nome" placeholder="Nome do cidadão">
+            <input type="number" name="Filhos" id="filhos" placeholder="Num. filhos">
+            <input type="number" name="Salario" id="salario" placeholder="Salário (R$)">
+            <input type="button" value="Adicionar" id="conf">
+
+            <table>
+                <tr>
+                    <th>Nome</th>
+                    <th>Número de Filhos</th>
+                    <th>Salário</th>
+                </tr>
+            </table>
+
+            <h2>Informações Gerais</h2>
+
+            <p>Média de salário da população: <span id="media_sal"></span></p>
+            <p>Média do número de filhos: <span id="media_filhos"></span></p>
+            <p>Maior salário dos habitantes: <span id="maior_sal"></span></p>
+            <p>Percentual de pessoas com salário menor que R$ 1500,00: <span id="porc"></span></p>
+
+            <input type="button" value="Atualizar dados" id="att">
+            <br>
+        </div>
+    </form>
+
+    <script src="index.js"></script>
+</body>
+</html>
