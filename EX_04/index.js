@@ -33,6 +33,12 @@ function escrever_valor(){
         mulheres[1] = ref
     }
 
+    if(mulheres[0].idade == mulheres[1].idade || homens[0].idade == homens[1].idade)
+    {
+        soma.innerText = `Por favor, insira idades diferentes`;
+        return;
+    }
+
     soma.innerText = `Idade do ${homens[0].nome} + ${mulheres[1].nome} = ${homens[0].idade + mulheres[1].idade}`
     multi.innerText = `Idade do ${homens[1].nome} x ${mulheres[0].nome} = ${homens[1].idade * mulheres[0].idade}`
 }
