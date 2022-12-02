@@ -12,6 +12,7 @@ let campo_porc = document.getElementById("porc");
 let att = document.getElementById("att");
 
 add.addEventListener("click", adicionar);
+att.addEventListener("click", atualizar);
 
 let data = [];
 let media_sal = 0;
@@ -27,6 +28,14 @@ function adicionar(){
     for(var i=0; i<3; i++)
     {
         dados[i] = document.createElement("td");
+    }
+
+    if(check_valores())
+    {
+        nome.value = null;
+        filhos.value = null;
+        salario.value = null;
+        return;
     }
 
     info.name = dados[0].innerText = nome.value;
@@ -71,4 +80,26 @@ function atualizar(){
     campo_media_filhos.innerText = `${media_filhos.toFixed(2)}`;
     campo_maior_sal.innerText = `R$ ${maior_sal.toFixed(2)}`;
     campo_porc.innerText = `${porcentagem.toFixed(2)}%`;
+}
+
+function check_valores(){
+    if(nome.value == "" || nome.value == null)
+    {
+        alert("Por favor insira um nome válido");
+        return 1;
+    }
+
+    if(Number(filhos.value) < 0)
+    {
+        alert("Por favor insira um numero válido");
+        return 1;
+    }
+
+    if(Number(salario.value) < 0)
+    {
+        alert("Por favor insira um salário válido");
+        return 1;
+    }
+
+    return 0;
 }
