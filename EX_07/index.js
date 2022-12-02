@@ -80,6 +80,10 @@ function atualizar(){
     campo_media_filhos.innerText = `${media_filhos.toFixed(2)}`;
     campo_maior_sal.innerText = `R$ ${maior_sal.toFixed(2)}`;
     campo_porc.innerText = `${porcentagem.toFixed(2)}%`;
+
+    nome.value = null;
+    filhos.value = null;
+    salario.value = null;
 }
 
 function check_valores(){
