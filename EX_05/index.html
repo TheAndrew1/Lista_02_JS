@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX_05</title>
+</head>
+<body>
+    <form action="">
+        <fieldset>
+            <legend>Mercado</legend>
+            <label for="prod">Produto:</label>
+            <input type="text" name="Produto" id="prod">
+            <br><br>
+
+            <label for="quant">Quantidade:</label>
+            <input type="number" name="Quantidade" id="quant">
+            <br><br>
+
+            <label for="valor_unit">Valor unitário:</label>
+            <input type="number" name="Valor_Unitario" id="valor_unit">
+            <br><br>
+
+            <input type="button" value="Calcular" id="conf">
+            <br>
+        </fieldset>
+
+        <br>
+        <label>Total:</label>
+        <span id="total"></span>
+        <br><br>
+
+        <label>Desconto:</label>
+        <span id="desc"></span>
+        <br><br>
+
+        <label>Total a pagar:</label>
+        <span id="pagar"></span>
+        <br><br>
+    </form>
+
+    <script src="index.js"></script>
+</body>
+</html>
